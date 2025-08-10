@@ -17,7 +17,7 @@ jobs:
 
       - uses: actions/checkout@v2
       - name: Run Unit tests
-        run: go test -v ./...
+        run: go test -v $(go list ./... | grep -v '/examples')
 
   semantic-release:
     needs: [test]

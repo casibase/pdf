@@ -1,13 +1,14 @@
-package main
+package examples
 
 import (
 	"bytes"
 	"fmt"
+	"testing"
 
 	"github.com/casibase/pdf"
 )
 
-func main() {
+func TestGetPlainText(t *testing.T) {
 	pdf.DebugOn = true
 
 	f, r, err := pdf.Open("./pdf_test.pdf")
