@@ -1,12 +1,13 @@
-package main
+package examples
 
 import (
 	"fmt"
+	"testing"
 
 	"github.com/casibase/pdf"
 )
 
-func main() {
+func TestGetStyledText(t *testing.T) {
 	f, r, err := pdf.Open("./pdf_test.pdf")
 	if err != nil {
 		panic(err)
